@@ -16,11 +16,11 @@ const routes: Routes = [
       },
       {
         path: 'page',
-        component:PageComponent
+        loadChildren:() => import('./page/page.module').then((m) => m.PageModule),
       },
       {
         path: 'other-page',
-        component:OtherPageComponent
+        loadChildren:() => import('./other-page/other-page.module').then((m) => m.OtherPageModule),
       }
     ],
   },
